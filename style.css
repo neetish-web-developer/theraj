@@ -1,0 +1,270 @@
+/* =========================
+   Global Reset & Base
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #1a1a1a;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #d4af37;
+    /* Gold */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d4af37;
+}
+
+/* =========================
+   Unified Title Styling 
+   (Matches Contact Page "Get in Touch")
+========================= */
+.title {
+
+    padding: 50px 8%;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    background: transparent;
+}
+
+.title h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    position: relative;
+    display: inline-block;
+}
+
+/* The Green Underline - Exactly like contact.php */
+/* Underlined Sub-heading (Legacy of Bhendra) */
+.heading-style-index h2 {
+    font-size: 36px;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.heading-style-index h2::after {
+    content: "";
+    width: 80%;
+    height: 4px;
+    background: #4caf50;
+    display: block;
+    margin-top: 8px;
+}
+.contactus {
+    padding: 50px 8%;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    background: transparent;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero {
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1578353121590-29ec4930d7b2?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjusting Title colors specifically for Hero background */
+.hero .title h2 {
+    color: #fff;
+}
+
+.hero .hero-subtitle {
+    color: #ddd;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+/* =========================
+   Shop Section
+========================= */
+.shop-container {
+    padding: 4rem 5%;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #b8860b;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.add-to-cart:hover {
+    background-color: #d4af37;
+    color: #000;
+}
+
+/* =========================
+   Cart Icon
+========================= */
+.cart-icon {
+    position: relative;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #d4af37;
+    color: #000;
+    font-size: 11px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+    text-align: center;
+    padding: 3rem;
+    background: #1a1a1a;
+    color: #fff;
+    margin-top: 4rem;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .title h2 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        height: 300px;
+    }
+}
+
+/* =========================
+   Page Section Heading
+   (Same as Get in Touch & Photo Gallery)
+========================= */
+.page-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-heading h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    display: inline-block;
+    position: relative;
+}
+
+.page-heading h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: #4caf50;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}

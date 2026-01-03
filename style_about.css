@@ -1,0 +1,200 @@
+/* =========================
+   GLOBAL BASE (Consistent)
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================
+   NAVBAR (Inherited Safety)
+========================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #1a1a1a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d4af37;
+}
+
+/* =========================
+   ABOUT MAIN SECTION
+========================= */
+.container {
+    width: 100%;
+    padding: 60px 10%;
+    background: #fdfdfd;
+}
+
+.about {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* =========================
+   IMAGE (60% WIDTH & NO HOVER)
+========================= */
+.about-image {
+    flex: 0 0 60%;
+    /* Forces the image section to take 60% width */
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 8px solid #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    /* Hover transition removed for a professional static look */
+}
+
+/* Director Name Styling below Image */
+.director-name {
+    margin-top: 15px;
+}
+
+.director-name h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.director-name p {
+    color: #4caf50;
+    /* Green highlight consistent with theme */
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* =========================
+   TEXT CONTENT (40% Width)
+========================= */
+.about-content {
+    flex: 1;
+}
+
+.heading-style-index h2::after {
+    content: "";
+    width: 80%;
+    height: 4px;
+    background: #4caf50;
+    display: block;
+    margin-top: 8px;
+}
+
+/* =========================
+   WHY CHOOSE US SECTION
+========================= */
+.container2 {
+    padding: 80px 20px;
+    background-color: #044c7c;
+    margin-top: 40px;
+}
+
+.container2 h1 {
+    color: #f5de12;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.aim {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.about_li {
+    padding: 18px 25px;
+    font-size: 18px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.about_li:nth-child(even) {
+    background: #ffffff;
+    border-radius: 8px;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about_li:nth-child(odd) {
+    color: #ffffff;
+    border-left: 4px solid #f5de12;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #1a1a1a;
+    color: white;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 6%;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about-image {
+        flex: 0 0 100%;
+        /* Full width on small screens */
+    }
+
+    .about-image img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .heading-style-index h2::after {
+        margin: 8px auto;
+    }
+}
