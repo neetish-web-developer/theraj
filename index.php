@@ -2,10 +2,7 @@
 // =======================
 // DB CONNECTION
 // =======================
-$conn = new mysqli("localhost", "root", "", "theraj");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once 'admin/config.php';
 
 // =======================
 // FETCH PRODUCTS
